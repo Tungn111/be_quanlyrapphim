@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
+use App\Models\Phim;
+use Illuminate\Support\Facades\DB;
 
 class SuatChieuSeeder extends Seeder
 {

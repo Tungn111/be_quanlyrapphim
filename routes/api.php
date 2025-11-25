@@ -3,9 +3,11 @@
 use App\Http\Controllers\NhanVienController;
 use App\Http\Controllers\PhongChieuController;
 use App\Http\Controllers\PhimController;
+use App\Http\Controllers\SuatChieuController;
+use App\Http\Controllers\VeController;
+use App\Http\Controllers\VoucherController;
+use App\Http\Controllers\DonHangController;
 use Illuminate\Support\Facades\Route;
-
-
 
     Route::get('/phong-chieu/get-data', [PhongChieuController::class, 'getData']);
     Route::post('/phong-chieu/add-data', [PhongChieuController::class, 'addData']);
@@ -31,7 +33,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('/suat-chieu/tao-ve-auto', [SuatChieuController::class, 'taoVeAuto']);
     Route::post('/suat-chieu/tim-kiem', [SuatChieuController::class, 'search']);
 
-    
+
     Route::get('/nhan-vien/get-data', [NhanVienController::class, 'getData']);
     Route::post('/nhan-vien/add-data', [NhanVienController::class, 'addData']);
     Route::post('/nhan-vien/update', [NhanVienController::class, 'update']);
@@ -39,7 +41,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('/nhan-vien/change-status', [NhanVienController::class, 'changeStatus']);
     Route::post('/nhan-vien/tim-kiem', [NhanVienController::class, 'search']);
     Route::post('/admin/dang-nhap', [NhanVienController::class, 'dangNhap']);
-    
+
     Route::get('/voucher/get-data', [VoucherController::class, 'getData']);
     Route::post('/voucher/add-data', [VoucherController::class, 'addData']);
     Route::post('/voucher/update', [VoucherController::class, 'update']);

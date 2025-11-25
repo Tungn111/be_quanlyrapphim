@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PhimSeeder extends Seeder
 {
@@ -131,5 +132,8 @@ class PhimSeeder extends Seeder
                 'tinh_trang'    => 1,
             ],
         ];
+        DB::table('phims')->truncate();
+        DB::table('phims')->delete();
+        DB::table('phims')->insert($phims);
     }
 }
