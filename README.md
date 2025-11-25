@@ -82,7 +82,7 @@ php artisan serve
 
 API sẽ có sẵn tại `http://127.0.0.1:8000`.
 
-Để build assets frontend (nếu có):
+Để build assets frontend:
 
 ```bash
 npm run dev
