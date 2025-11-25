@@ -30,6 +30,13 @@ use Illuminate\Support\Facades\Route;
     Route::post('/nhan-vien/change-status', [NhanVienController::class, 'changeStatus']);
     Route::post('/nhan-vien/tim-kiem', [NhanVienController::class, 'search']);
     Route::post('/admin/dang-nhap', [NhanVienController::class, 'dangNhap']);
+    
+    Route::get('/voucher/get-data', [VoucherController::class, 'getData']);
+    Route::post('/voucher/add-data', [VoucherController::class, 'addData']);
+    Route::post('/voucher/update', [VoucherController::class, 'update']);
+    Route::post('/voucher/delete', [VoucherController::class, 'destroy']);
+    Route::post('/voucher/change-status', [VoucherController::class, 'changeStatus']);
+    Route::post('/dat-ve/thanh-toan', [DonHangController::class, 'thanhToan']);
 
     Route::get('/ve/get-data', [VeController::class, 'getData']);
     Route::post('/ve/add-data', [VeController::class, 'addData']);
