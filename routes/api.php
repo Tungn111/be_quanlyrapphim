@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NhanVienController;
 use App\Http\Controllers\PhongChieuController;
 use App\Http\Controllers\PhimController;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,23 @@ use Illuminate\Support\Facades\Route;
     Route::post('/suat-chieu/tim-kiem', [SuatChieuController::class, 'search']);
 
     
+    Route::get('/nhan-vien/get-data', [NhanVienController::class, 'getData']);
+    Route::post('/nhan-vien/add-data', [NhanVienController::class, 'addData']);
+    Route::post('/nhan-vien/update', [NhanVienController::class, 'update']);
+    Route::post('/nhan-vien/delete', [NhanVienController::class, 'destroy']);
+    Route::post('/nhan-vien/change-status', [NhanVienController::class, 'changeStatus']);
+    Route::post('/nhan-vien/tim-kiem', [NhanVienController::class, 'search']);
+    Route::post('/admin/dang-nhap', [NhanVienController::class, 'dangNhap']);
+    
+    Route::get('/voucher/get-data', [VoucherController::class, 'getData']);
+    Route::post('/voucher/add-data', [VoucherController::class, 'addData']);
+    Route::post('/voucher/update', [VoucherController::class, 'update']);
+    Route::post('/voucher/delete', [VoucherController::class, 'destroy']);
+    Route::post('/voucher/change-status', [VoucherController::class, 'changeStatus']);
+    Route::post('/dat-ve/thanh-toan', [DonHangController::class, 'thanhToan']);
+
+    Route::get('/ve/get-data', [VeController::class, 'getData']);
+    Route::post('/ve/add-data', [VeController::class, 'addData']);
+    Route::post('/ve/update', [VeController::class, 'update']);
+    Route::post('/ve/delete', [VeController::class, 'destroy']);
+    Route::post('/ve/soat-ve', [VeController::class, 'soatVe']);
