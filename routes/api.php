@@ -37,3 +37,9 @@ use Illuminate\Support\Facades\Route;
     Route::post('/voucher/delete', [VoucherController::class, 'destroy']);
     Route::post('/voucher/change-status', [VoucherController::class, 'changeStatus']);
     Route::post('/dat-ve/thanh-toan', [DonHangController::class, 'thanhToan']);
+
+    Route::get('/ve/get-data', [VeController::class, 'getData']);
+    Route::post('/ve/add-data', [VeController::class, 'addData']);
+    Route::post('/ve/update', [VeController::class, 'update']);
+    Route::post('/ve/delete', [VeController::class, 'destroy']);
+    Route::post('/ve/soat-ve', [VeController::class, 'soatVe']);
