@@ -23,6 +23,15 @@ use Illuminate\Support\Facades\Route;
     Route::post('/phim/change-status', [PhimController::class, 'changeStatus']);
     Route::post('/phim/tim-kiem', [PhimController::class, 'search']);
 
+    Route::get('/suat-chieu/get-data', [SuatChieuController::class, 'getData']);
+    Route::post('/suat-chieu/add-data', [SuatChieuController::class, 'addData']);
+    Route::post('/suat-chieu/update', [SuatChieuController::class, 'update']);
+    Route::post('/suat-chieu/delete', [SuatChieuController::class, 'destroy']);
+    Route::post('/suat-chieu/change-status', [SuatChieuController::class, 'changeStatus']);
+    Route::post('/suat-chieu/tao-ve-auto', [SuatChieuController::class, 'taoVeAuto']);
+    Route::post('/suat-chieu/tim-kiem', [SuatChieuController::class, 'search']);
+
+    
     Route::get('/nhan-vien/get-data', [NhanVienController::class, 'getData']);
     Route::post('/nhan-vien/add-data', [NhanVienController::class, 'addData']);
     Route::post('/nhan-vien/update', [NhanVienController::class, 'update']);
