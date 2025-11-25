@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NhanVienController;
 use App\Http\Controllers\PhongChieuController;
 use App\Http\Controllers\PhimController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,11 @@ use Illuminate\Support\Facades\Route;
     Route::post('/phim/delete', [PhimController::class, 'destroy']);
     Route::post('/phim/change-status', [PhimController::class, 'changeStatus']);
     Route::post('/phim/tim-kiem', [PhimController::class, 'search']);
+
+    Route::get('/nhan-vien/get-data', [NhanVienController::class, 'getData']);
+    Route::post('/nhan-vien/add-data', [NhanVienController::class, 'addData']);
+    Route::post('/nhan-vien/update', [NhanVienController::class, 'update']);
+    Route::post('/nhan-vien/delete', [NhanVienController::class, 'destroy']);
+    Route::post('/nhan-vien/change-status', [NhanVienController::class, 'changeStatus']);
+    Route::post('/nhan-vien/tim-kiem', [NhanVienController::class, 'search']);
+    Route::post('/admin/dang-nhap', [NhanVienController::class, 'dangNhap']);
