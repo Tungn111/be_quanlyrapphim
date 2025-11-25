@@ -19,7 +19,7 @@ class PhimController extends Controller
 
     public function addData(Request $request)
     {
-        
+
 
 
         Phim::create([
@@ -46,7 +46,7 @@ class PhimController extends Controller
 
     public function update(Request $request)
     {
-        
+
 
 
         Phim::where('id', $request->id)->update([
@@ -73,7 +73,7 @@ class PhimController extends Controller
 
     public function destroy(Request $request)
     {
-        
+
 
 
         Phim::where('id', $request->id)->delete();
@@ -86,7 +86,7 @@ class PhimController extends Controller
 
     public function changeStatus(Request $request)
     {
-        
+
 
 
         $phim = Phim::where('id', $request->id)->first();
