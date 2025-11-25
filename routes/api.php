@@ -30,3 +30,9 @@ use Illuminate\Support\Facades\Route;
     Route::post('/nhan-vien/change-status', [NhanVienController::class, 'changeStatus']);
     Route::post('/nhan-vien/tim-kiem', [NhanVienController::class, 'search']);
     Route::post('/admin/dang-nhap', [NhanVienController::class, 'dangNhap']);
+
+    Route::get('/ve/get-data', [VeController::class, 'getData']);
+    Route::post('/ve/add-data', [VeController::class, 'addData']);
+    Route::post('/ve/update', [VeController::class, 'update']);
+    Route::post('/ve/delete', [VeController::class, 'destroy']);
+    Route::post('/ve/soat-ve', [VeController::class, 'soatVe']);
