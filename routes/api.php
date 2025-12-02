@@ -7,6 +7,7 @@ use App\Http\Controllers\SuatChieuController;
 use App\Http\Controllers\VeController;
 use App\Http\Controllers\VoucherController;
 use App\Http\Controllers\DonHangController;
+use App\Http\Controllers\PhanHoiController;
 use Illuminate\Support\Facades\Route;
 
     Route::get('/phong-chieu/get-data', [PhongChieuController::class, 'getData']);
@@ -54,3 +55,9 @@ use Illuminate\Support\Facades\Route;
     Route::post('/ve/update', [VeController::class, 'update']);
     Route::post('/ve/delete', [VeController::class, 'destroy']);
     Route::post('/ve/soat-ve', [VeController::class, 'soatVe']);
+
+    Route::get('/binh-luan/get-data', [BinhLuanController::class, 'getData']);
+    Route::get('/binh-luan/doi-trang-thai/{id}', [BinhLuanController::class, 'doiTrangThai']);
+
+    Route::post('/chi-tiet-phim/binh-luan', [BinhLuanController::class, 'binhLuanPhim']);
+    Route::get('/chi-tiet-phim/binh-luan/get-data/{id}', [BinhLuanController::class, 'getDataClientBinhLuan']);
